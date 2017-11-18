@@ -23,6 +23,7 @@ main{
 	border: solid 3px #00CC66;
 	text-align: center;
 	padding: 2px;
+	margin-bottom: 10px;
 }
 
 .instructions, .timer{
@@ -30,6 +31,7 @@ main{
 	margin: 0 auto;
 	border: solid 1px black;
 	text-align: center;
+	margin-bottom: 10px;
 }
 
 .timer{
@@ -40,13 +42,24 @@ main{
 .triviaBody, .submit{
 	display: none;
 }
+h3{
+	vertical-align: middle;
+	text-align: center;
+}
+.buttons{
+		margin: 0 auto;
+		text-align: center;
+
+}
 
 label{
-	max-width: 25%;
+	display: inline-block;
 	border: solid 1px black;
 	background: #EAECEE;
-	padding: 5px;
+	padding: 5px 10px;
 	border-radius: 5px;
+	margin-right: 10px;
+	margin-left: 10px;
 }
 
 .submit{
@@ -58,4 +71,25 @@ label{
 	border: solid 3px #F1948A;
 	text-align: center;
 	padding: 2px;
+}
+
+.footer{
+	text-align: center;
+}
+
+.start:hover {
+	border: solid 3px green;
+	background-color: #00CC66;
+	cursor: pointer;
+}
+
+.submit:hover {
+	background-color: #F1948A;
+	border: solid 3px red;
+	cursor: pointer;
+}
+
+label:hover{
+	cursor:pointer;
+
 }

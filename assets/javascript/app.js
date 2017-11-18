@@ -1,7 +1,7 @@
 $(document).ready(function() 
 {
 	//declare a starting variable for the clock
-	var timer = 60;
+	var timer = 90;
 	
 	//create a function to start the clock
 	function run()
@@ -20,8 +20,7 @@ $(document).ready(function()
 		$('.timer').text(timer + ' seconds remaining.')
 		if (timer === 0)
 		{
-				stop();
-				//$alert('You got '+ score(); ' out of 10!');
+				scoreChecker();
 		}
 	};
 	//populate the timer value into the HTML
@@ -54,6 +53,24 @@ $(document).ready(function()
 		};
 	};
 	
+	function scoreChecker(){
+		answers.push($("input[name=questionOne]:checked").val());
+		answers.push($("input[name=questionTwo]:checked").val());
+		answers.push($("input[name=questionThree]:checked").val());
+		answers.push($("input[name=questionFour]:checked").val());
+		answers.push($("input[name=questionFive]:checked").val());
+		answers.push($("input[name=questionSix]:checked").val());
+		answers.push($("input[name=questionSeven]:checked").val());
+		answers.push($("input[name=questionEight]:checked").val());
+		answers.push($("input[name=questionNine]:checked").val());
+		answers.push($("input[name=questionTen]:checked").val());
+		stop();
+		answersCorrect();
+		alert('You scored ' + scoreTotal + ' out of 10 correct!');
+		scoreTotal = 0;
+		console.log(scoreTotal);
+	}
+
 	$('.submit').on('click', function() 
 		{
 			answers.push($("input[name=questionOne]:checked").val());
